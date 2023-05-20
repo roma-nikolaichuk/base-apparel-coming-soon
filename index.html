@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Nikolaichuk">
+    <meta
+      name="description"
+      content="Base Apparel coming soon page Solution for FrontendMentor.io. Users should be able to see hover states for all interactive elements on the page. Receive an error message when the form is submitted if: the input field is empty, the email address is not formatted correctly."
+    >
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Frontend, Mentor, Base Apparel coming soon page, Base Apparel coming soon page Solution, Roman Nikolaichuk, FrontendMentor.io, Roman Nikolaichuk Frontend"
+    >
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    >
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+  </head>
+  <body>
+    <main class="container">
+      <header class="header">
+        <img
+          src="./assets/images/logo.svg"
+          alt="Base Apparel Logo"
+          class="header__logo animate__animated animate__zoomIn"
+        >
+      </header>
+
+      <h1 class="sr-only">Base Apparel coming soon page</h1>
+
+      <aside class="image-container">
+        <picture>
+          <source
+            media="(min-width: 992px)"
+            srcset="./assets/images/hero-desktop.jpg"
+          >
+          <img
+            src="./assets/images/hero-mobile.jpg"
+            alt="Base Apparel Preview"
+            class="image animate__animated animate__zoomIn"
+          >
+        </picture>
+      </aside>
+
+      <section class="content">
+        <h1 class="content__title animate__animated animate__zoomIn">We're <span>coming soon</span></h1>
+        <p class="content__description animate__animated animate__zoomIn">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+
+        <div id="notification" class="notification">
+          <i class="fa fa-check-circle"></i>
+          <p id="notification__text" class="notification__text"></p>
+        </div>
+
+        <form class="subscribe-form animate__animated animate__zoomIn" id="subscribe-form" method="POST">
+          <div class="subscribe-form__group">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email Address"
+              class="subscribe-form__input"
+              required
+            >
+
+            <button
+              type="submit"
+              id="subscribe-form__submit"
+              class="subscribe-form__submit"
+            >
+              <img
+                src="./assets/images/icon-arrow.svg"
+                alt="Submit"
+                class="subscribe-form__submit-icon"
+              >
+            </button>
+          </div>
+
+          <label for="email" id="subscribe-form__label--error" class=""></label>
+        </form>
+      </section>
+    </main>
+
+    <!-- Start of the footer -->
+    <footer class="footer">
+      <button
+        class="footer__button js-toggle-tip animate__animated animate__fadeInBottomRight"
+        type="button"
+        aria-label="Attribution"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="attribution"
+      >
+        <img
+          class="footer__image"
+          src="https://avatars.githubusercontent.com/u/107611767?s=400&u=af2347175f31d710bee7ec634f994ae53d460731&v=4"
+          alt="GitHub Avatar"
+          width="50"
+          height="50"
+        >
+      </button>
+
+      <div
+        id="attribution"
+        role="tooltip"
+        class="footer__attribution footer__dialog js-tooltip"
+      >
+        <p class="footer__text">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/roma-nikolaichuk/base-apparel-coming-soon"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Roman Nikolaichuk</a
+          >.
+        </p>
+      </div>
+    </footer>
+    <!-- End of the footer -->
+
+    <script src="./assets/js/subscribe-form.js"></script>
+    <script src="./assets/js/footer.js" defer></script>
+  </body>
+</html>

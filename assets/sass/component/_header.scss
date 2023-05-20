@@ -1,0 +1,18 @@
+.header {
+  padding: 1.85rem 2rem;
+
+  @include media-breakpoint-up(lg) {
+    padding: 4rem 10.25rem;
+
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+
+  &__logo {
+    width: 32%;
+
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+}

@@ -1,0 +1,81 @@
+.subscribe-form {
+  &__group {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: $theme-dark-grayish-red;
+    border: 1px solid $theme-desaturated-red;
+    border-radius: 50px;
+
+    @include media-breakpoint-up(lg) {
+      padding: 1.1rem 2rem;
+      font-size: 1rem;
+    }
+
+    &--error {
+      border: 2px solid $theme-soft-red;
+
+      background-image: url("../../../assets/images/icon-error.svg");
+      background-repeat: no-repeat;
+      background-position: right calc(4.5rem + 1px) center;
+
+      @include media-breakpoint-up(lg) {
+        background-position: right calc(7rem + 1px) center;
+      }
+    }
+
+    &:is(:hover, :focus) {
+      // border: 2px solid green;
+    }
+
+    &[type="email"]::placeholder,
+    &[type="email"]::-webkit-input-placeholder {
+      color: $theme-desaturated-red;
+    }
+  }
+
+  &__submit {
+    @include flex(row, center, center);
+
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    width: 4rem;
+    background: $gradient-light-to-dark;
+    border-radius: 50px;
+
+    box-shadow: 0px 10px 15px -3px $theme-desaturated-red;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.6;
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 6.25rem;
+    }
+  }
+
+  &__label--error {
+    display: block;
+    margin-top: 0.75rem;
+    padding-left: 1.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: $theme-soft-red;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 2rem;
+      font-size: 0.8rem;
+    }
+  }
+}
+
+// janeappleseed#email.com
